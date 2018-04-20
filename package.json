@@ -1,0 +1,36 @@
+{
+  "name": "ttt",
+  "version": "1.0.0",
+  "description": "ttt assignment",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm-run-all --parallel open:src lint:watch",
+    "open:src": "nodemon ./src/app.js --exec babel-node",
+    "lint": "node_modules/.bin/esw src routes",
+    "lint:watch": "npm run lint -- --watch"
+  },
+  "author": "stillNovice",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "express": "4.13.4",
+    "express-handlebars": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "colors": "1.1.2",
+    "cross-env": "1.0.7",
+    "eslint": "2.9.0",
+    "eslint-plugin-import": "1.6.1",
+    "eslint-watch": "2.1.11",
+    "morgan": "^1.9.0",
+    "npm-run-all": "1.8.0",
+    "open": "0.0.5"
+  }
+}
