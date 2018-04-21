@@ -50,11 +50,15 @@ visit the URL: http://ec2-54-169-128-68.ap-southeast-1.compute.amazonaws.com:901
   # Screenshots
   ## N = 2
   <img src="./screenshots/test_case_n2.PNG" alt="N = 2" width="100%" height="80%"/>
+
   ## N = 4
   <img src="./screenshots/test_case_n4.PNG" alt="N = 4" width="100%" height="80%"/>
+
   ## N = 11
   <img src="./screenshots/test_case_n11.PNG" alt="N = 11" width="100%" height="80%"/>
+
   ## N = MAX
   <img src="./screenshots/test_case_nmax.PNG" alt="N = max" width="100%" height="80%"/>
+  
   ## N = String
   <img src="./screenshots/test_case_random_string.PNG" alt="N = String" width="100%" height="80%"/>
