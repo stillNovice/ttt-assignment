@@ -35,6 +35,10 @@ app.use(flash());
 
 app.use('/', mainRoute);
 
+app.get('*', function (req, res, next) {
+  res.send('<div style="text-align: center; margin-top: 30px;"><h2>SORRY NO SUCH URL EXISTS!!!</h2><h2 style="color: grey;">404 NOT FOUND</h2></div>');
+}); 
+
 app.listen(PORT, () => {
   console.log(colors.cyan(`app started @ ${PORT}`));  // eslint-disable-line no-console
 });

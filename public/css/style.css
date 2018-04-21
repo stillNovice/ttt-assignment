@@ -88,3 +88,11 @@ body {
     border-bottom: 0;
   }
 }
+
+.errMsgSpan {
+  font-size: 14px;
+  margin-top: 2px;
+  margin-left: 5px;
+  margin-bottom: 6px;
+  color: #f30862d7;
+}

@@ -20,14 +20,28 @@
     <main role="main">
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Terribaly Tiny Tales</h1>
+          <h1 class="jumbotron-heading">Terribly Tiny Tales</h1>
         </div>
       </section>
       <div class="py-5 bg-light">
         <div class="container container-fluid">
-
-        {{{body}}}
-          
+          <form method="POST" action="/getFrequencies">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-9 input-group-lg">
+                    <input type="text" class="form-control inputN" placeholder="Enter N..." name="inputN">
+                    
+                    <span id="inputN_err" class="errMsgSpan float-left" style="display: none;">*Enter integer val</span>
+                </div>
+                <div class="col-3">
+                    <button type="submit" class="btn btn-primary btn-lg submitBtn" disabled="disabled">Hit Me!</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <br>
+          <br>
+          {{{body}}}
         </div>
       </div>      
     </main>
@@ -45,5 +59,38 @@
     </script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/main.js"></script>
+    
+    <script>
+      $(document).ready(function () {
+        $('.inputN').on('input change', function () {
+          if ($(this).val() != '') {
+            $('.submitBtn').prop('disabled', false);
+          }
+          else {
+            $('.submitBtn').prop('disabled', true);
+          }
+          $('#inputN_err').removeClass('errBox');
+          $('#inputN_err').hide();
+        });
+
+        $('.submitBtn').on('click', function(event) {
+          $(".myFreqData").html("");
+          let val = $('.inputN').val();
+          if(!isNaN(val) && parseInt(Number(val)) == val && !isNaN(parseInt(val, 10))) {
+            return true;
+          } else {
+            $('#inputN_err').show();
+            return false;
+          }
+          event.preventDefault();
+          event.stopPropagation();
+        });
+
+        $('.inputN').focus(function() {
+          $('#inputN_err').removeClass('errBox');
+          $('#inputN_err').hide();
+        })
+      });
+    </script>
   </body>
 </html>

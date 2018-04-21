@@ -1,16 +1,22 @@
-<form method="POST" action="/getFrequencies">
-  <div class="form-group">
-    <div class="row">
-      <div class="col-7 input-group-lg">
-          <input type="text" class="form-control" placeholder="Enter N..." name="inputN">
-      </div>
-      <div class="col-5">
-          <button type="submit" class="btn btn-primary btn-lg">Create Document!</button>
-      </div>
-    </div>
+{{#if data}}
+  <div class="myFreqData">
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-primary">
+        <span>S.No</span>
+        <b>WORD</b>
+        <span class="badge badge-primary badge-pill">FREQUENCY</span>
+      </li>
+      <br>
+      {{#if data}}
+        {{#each data}}
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span style="font-size: 16px;">{{this.idx}}</span>
+            <span style="font-size: 16px; font-weight: bold;">{{this.word}}</span>
+            <span class="badge badge-primary badge-pill">{{this.freq}}</span>
+          </li>
+        {{/each}}
+      {{/if}}
+    </ul>
   </div>
-</form>
-
-
-
+{{/if}}
 

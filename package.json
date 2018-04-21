@@ -13,6 +13,7 @@
   "author": "stillNovice",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-preset-es2015": "^6.24.1",
     "body-parser": "^1.18.2",
     "connect-flash": "^0.1.1",
