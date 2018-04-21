@@ -33,8 +33,8 @@ router.get('/', function(req, res, next) {
         allWords[i] = allWords[i].replace(/[^a-zA-Z']/g, "").toLowerCase();
         MyTrie.add(allWords[i]);
       }
-      const sss = new Set(allWords);
-      console.log('sss', sss.size);
+      //const sss = new Set(allWords);
+      //console.log('sss', sss.size);
       //console.log('allwords', allWords);
       let freqOfWords = MyTrie.traverse().sort(function(a, b) {
         if(a.freq > b.freq) {

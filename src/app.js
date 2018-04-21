@@ -9,7 +9,7 @@ import flash from 'connect-flash';
 
 import mainRoute from '../routes/mainRoute';
 
-const PORT = process.env.PORT | 3000;
+const PORT = process.env.PORT | 9010;
 const app = express();
 
 // setup morgan logger
